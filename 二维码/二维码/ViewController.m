@@ -24,6 +24,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+// 二维码生成
 - (IBAction)creatImage:(id)sender {
     // 1 创建过滤器
     CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
@@ -67,6 +68,7 @@
     return [UIImage imageWithCGImage:scaleImage];
 }
 
+// 二维码扫描
 - (IBAction)scanImage:(id)sender {
     // 1 创建捕捉会话
     AVCaptureSession *session = [[AVCaptureSession alloc] init];
